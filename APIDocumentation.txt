@@ -3,7 +3,7 @@ desc: returns all dogs
 req: -
 resp: 200 OK - list of dogs
 example: {
-            "list": [{"id": 5, "name": "Dunco", "age": 5, "breed": "Doberdog", "color": "grey", "arrived": "2019-03-15"}
+            "list": [{"id": 5, "name": "Dunco", "age": 5, "sex": "male", "breed": "Doberdog", "color": "grey", "arrived": "2019-03-15"}
                 ,{ another dog info }
                 ,{ another dog info }
                 ,{ another dog info }
@@ -14,7 +14,7 @@ example: {
 
 POST /dog/new
 desc: inserts new dog to the database
-req: {"name": "Dunco", "age": 5, "breed": "Doberdog", "color": "grey"}
+req: {"name": "Dunco", "age": 5, "sex": "male", "breed": "Doberdog", "color": "grey"}
 resp: 201 OK - dog inserted
 example: { "OK": "New dog added." }
       400 - Bad request
