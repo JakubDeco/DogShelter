@@ -1,0 +1,37 @@
+GET /dogs
+desc: returns all dogs
+req: -
+resp: 200 OK - list of dogs
+example: {
+            "list": [{"id": 5, "name": "Dunco", "age": 5, "breed": "Doberdog", "color": "grey", "arrived": "2019-03-15"}
+                ,{ another dog info }
+                ,{ another dog info }
+                ,{ another dog info }
+                ],
+            "count": 4;
+            "dateTime": "2021-03-25 15:45:21"
+        }
+
+POST /dog/new
+desc: inserts new dog to the database
+req: {"name": "Dunco", "age": 5, "breed": "Doberdog", "color": "grey"}
+resp: 201 OK - dog inserted
+example: { "OK": "New dog added." }
+      400 - Bad request
+      example: { "Error": "Bad request." }
+
+PUT /dog/vaccine?id=<int>
+desc: records vaccination for rabies for the dog
+req: id <int> parameter
+resp: 200 OK - date
+example: { "OK": "Vaccination recorded." }
+      400 - Bad request
+      example: { "Error": "Bad request." }
+
+DELETE /dog/delete?id=<int>
+desc: deletes a dog by id
+req: id <int> parameter
+resp: 200 OK - date
+example: { "OK": "Vaccination recorded." }
+      400 - Bad request
+      example: { "Error": "Bad request." }
