@@ -13,12 +13,16 @@ public class Dog {
     private String color;
     private Date arrival;
 
-    public Dog(String name, int age, int sex, String breed, String color, Date arrival) {
+    public Dog(String name, int age, int sex, String breed, String color) {
         this.name = name;
         this.age = age;
         this.sex = sex==0 ? Sex.MALE : Sex.FEMALE;
         this.breed = breed;
         this.color = color;
+    }
+
+    public Dog(String name, int age, int sex, String breed, String color, Date arrival) {
+        this(name, age, sex, breed, color);
         this.arrival = arrival;
     }
 
