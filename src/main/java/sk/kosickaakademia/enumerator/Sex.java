@@ -1,5 +1,15 @@
 package sk.kosickaakademia.enumerator;
 
 public enum Sex {
-    MALE, FEMALE
+    MALE(0), FEMALE(1);
+
+    private int value;
+
+    Sex(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
