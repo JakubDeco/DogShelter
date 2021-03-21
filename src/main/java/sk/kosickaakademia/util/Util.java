@@ -76,7 +76,7 @@ public class Util {
         return sdf.format(dateTime.getTime());
     }
 
-    public String normalizeName(String name){
+    public static String normalizeName(String name){
         if (name == null || name.isBlank())
             return "";
         name = name.trim();

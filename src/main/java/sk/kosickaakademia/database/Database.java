@@ -70,7 +70,7 @@ public class Database {
                 int sex = rs.getInt("sex");
                 String breed = rs.getString("breed");
                 String color = rs.getString("color");
-                Date arrival = rs.getDate("arrival");
+                Date arrival = rs.getDate("arrived");
 
                 list.add(new Dog(id, name, age, sex, breed, color, arrival));
             }
@@ -128,7 +128,7 @@ public class Database {
         Connection connection = getConnection();
 
         if (connection != null){
-            String query ="delete * from dog where id=?";
+            String query ="delete from dog where id=?";
             try {
                 PreparedStatement ps = connection.prepareStatement(query);
                 ps.setInt(1, id);

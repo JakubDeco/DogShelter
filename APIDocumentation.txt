@@ -20,7 +20,7 @@ example: { "OK": "New dog added." }
       400 - Bad request
       example: { "Error": "Bad request." }
 
-PUT /dog/vaccine?id=<int>&name=<String>
+PUT /dog/name?id=<int>&name=<String>
 desc: changes a name for a dog by id
 req: id <int>, name <String> parameters
 resp: 200 OK - Name changed
@@ -32,6 +32,6 @@ DELETE /dog/delete?id=<int>
 desc: deletes a dog by id
 req: id <int> parameter
 resp: 200 OK - date
-example: { "OK": "Vaccination recorded." }
+example: { "OK": "Dog deleted." }
       400 - Bad request
       example: { "Error": "Bad request." }
